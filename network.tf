@@ -1,9 +1,3 @@
-provider "google" {
-  credentials = file("sa.json")
-  project     = var.project
-  region      = var.region
-}
-
 resource "google_compute_network" "main_infra" {
   name = "${var.name}-vpc"
   auto_create_subnetworks = var.auto_create_subnetworks
